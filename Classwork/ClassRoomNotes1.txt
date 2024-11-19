@@ -1,0 +1,26 @@
+Power Bi Notes
+
+ 	
+CANVAS: The Area where we are performing queries to build Dashboard.
+
+Creating Dashboard in Power BI
+-----------------------------------
+
+First Step is to load the data. 
+
+To Change the First row as a Column header: We have option called as " Use First Row as Headers " 
+
+To put any condition by adding any one column
+
+Add Column --> Conditional Column --> Dialogue box will be open. Then We should fill the data for New Column name 
+
+Condition should be like below
+
+If 'Select Existing column name on which column we should do Action' , Operator we should give any. Here we are giving 'equals', Values as 'existing value (Yes)' Then output as '1' Else output as '0'. Now click on Ok. Change datatype as 'whole number'.
+
+Then Close and apply. 
+
+2nd step: we have to check the connection:
+
+We have to add new Measures. 
+

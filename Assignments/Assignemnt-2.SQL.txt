@@ -1,0 +1,43 @@
+
+Create Database EY
+
+Create SCHEMA SqlQueries
+
+Create table Employees (Employee_Id Int Primary KEY, First_name String, Last_name String, Department_Id Int, Salary Decimal,
+Hire_Date Date, Manager_id Int)
+
+Create table Job_Titles (Job_Title_Id Int PRIMARY KEY, Employee_id int, Job_title Varchar)
+
+Insert into Employees (employee_id, first_name, last_name, department_id, Salary, hire_date, manager_id) 
+Values (100, 'Mahesh', 'H', 001, 20000, '2024-01-12', 110),
+ (101, 'Suresh', 'N', 002, 30000, '2024-01-12', 111),
+ (102, 'Naresh', 'S', 003, 40000, '2024-01-12', 112),
+ (110, 'Rajesh', 'R', 004, 50000, '2024-01-12', 0),
+ (111, 'Balu', 'B', 005, 50000, '2024-01-12',0)
+Alter table EMPLOYEES Add COLUMN JOB_TITLE String 
+ Update EMPLOYEES set last_name is null where last_name = 0 
+
+ UPDATE EMPLOYEES Set JOB_TITLE = 'Manager' where employee_id = 111
+
+ Insert into JOB_TITLES (Job_Title_Id, Employee_Id, Job_Title) 
+Values (201, '100', 'Employee'),
+ (202, '101', 'Employee' ),
+ (203, '102', 'Employee'),
+ (204, '110', 'Manager'),
+ (205, '111', 'Manager')
+
+ Select manager_id from EMPLOYEES
+
+ Select Employee_id, first_name, last_name from EMPLOYEES where manager_id Not in (SELECT manager_id from EMPLOYEES)
+
+ Select Employees.Employee_id, Job_Titles.job_title from EMPLOYEES left join
+ JOB_TITLES ON EMPLOYEES.employee_id = JOB_TITLES.employee_id
+
+ Select * from EMPLOYEES
+
+  Select Employee_id, first_name, last_name from EMPLOYEES 
+
+  Select Employees.first_name, Job_Titles.job_title from EMPLOYEES left join
+ JOB_TITLES ON EMPLOYEES.JOB_TITLE = JOB_TITLES.JOB_TITLE
+
+ Select * from employees
